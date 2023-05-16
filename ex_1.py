@@ -1,50 +1,18 @@
-spell = input()
-list_actions = ["Abjuration", "Necromancy", "Illusion", "Divination", "Alteration"]
-while True:
-    command = input().split(" ")
-    action = command[0]
+import math
+from math import ceil
+number_of_studens = int(input())
+number_of_lectures = int(input())
+additional_bonus = int(input())
+max_bonus = []
+atendances_count_list = []
+for _ in range(number_of_studens):
+    attendances_count = int(input())
+    atendances_count_list.append(attendances_count)
 
-    if action == "Abracadabra":
-        break
+    total_bonus = attendances_count / number_of_lectures * (5 + additional_bonus)
+    max_bonus.append(total_bonus)
 
-    if action not in list_actions:
-        print("The spell did not work!")
+    maximum_bonus = max(max_bonus)
 
-    elif action == "Abjuration":
-        spell = spell.upper()
-        print(spell)
-
-
-    elif action == "Necromancy":
-        spell = spell.lower()
-        print(spell)
-
-
-    elif action == "Illusion":
-        ill_index = int(command[1])
-        ill_letter = command[2]
-        if ill_index < 0 or ill_index >= (len(spell)):
-            print("The spell was too weak.")
-        else:
-            spell = spell[:ill_index] + ill_letter + spell[ill_index+1:]
-            print("Done!")
-
-
-    elif action == "Divination":
-        f_subs = command[1]
-        s_subs = command[2]
-        if f_subs not in spell:
-            continue
-        else:
-            spell = spell.replace(f_subs, s_subs)
-            print(spell)
-
-
-    elif action == "Alteration":
-        subs_to_remove = command[1]
-
-        if subs_to_remove not in spell:
-            continue
-        else:
-            spell = spell.replace(subs_to_remove, "")
-            print(spell)
+print(f"Max Bonus: {round(ceil(maximum_bonus))}.")
+print(f"The student has attended {(round(ceil(max(atendances_count_list))))} lectures.")
