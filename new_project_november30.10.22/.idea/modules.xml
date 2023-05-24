@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/new_project_november30.10.22.iml" filepath="$PROJECT_DIR$/.idea/new_project_november30.10.22.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../python_basics 2022/.idea/python_basics 2022.iml" filepath="$PROJECT_DIR$/../python_basics 2022/.idea/python_basics 2022.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../python_basics_uprajnenie/.idea/python_basics_uprajnenie.iml" filepath="$PROJECT_DIR$/../python_basics_uprajnenie/.idea/python_basics_uprajnenie.iml" />
+    </modules>
+  </component>
+</project>

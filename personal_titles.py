@@ -1,0 +1,15 @@
+age=float(input())
+gender=input()
+
+# logic/code
+if gender=="m" and age >=16:
+    print("Mr.")
+
+elif gender=="m" and age < 16:
+    print("Master")
+
+elif gender=="f" and age >=16:
+    print("Ms.")
+
+elif gender=="f" and age < 16:
+    print("Miss")
