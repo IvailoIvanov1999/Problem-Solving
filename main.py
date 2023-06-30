@@ -1,16 +1,16 @@
-# This is a sample Python script.
+from project_fruit.album import Album
+from project_fruit.band import Band
+from project_fruit.song import Song
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+song = Song("Running in the 90s", 3.45, False)
+print(song.get_info())
+album = Album("Initial D", song)
+second_song = Song("Around the World", 2.34,
+False)
+print(album.add_song(second_song))
+print(album.details())
+print(album.publish())
+band = Band("Manuel")
+print(band.add_album(album))
+print(band.remove_album("Initial D"))
+print(band.details())
